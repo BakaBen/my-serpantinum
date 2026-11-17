@@ -60,3 +60,4 @@ Quick utility actions:
 - Screenshots: `serpantinum screenshot` (add `--edit`, `--full`, or `--full --edit`)
 - Brightness: `serpantinum brightness lower` and `serpantinum brightness raise`
 - Volume: `serpantinum volume lower`, `serpantinum volume raise`, and `serpantinum volume mute-toggle`
+- Touchpad: `serpantinum touchpad toggle` (`XF86TouchpadToggle`)

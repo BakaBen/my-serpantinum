@@ -41,12 +41,13 @@ PanelWindow {
     readonly property color capsColor: Qt.lighter(ThemeBackend.peach, 1.2)
     readonly property color numColor: Qt.lighter(ThemeBackend.sapphire, 1.4)
     readonly property color airColor: Qt.lighter(ThemeBackend.red, 1.2)
+    readonly property color touchpadColor: Qt.lighter(ThemeBackend.teal, 1.2)
 
     property string kind: OsdController.kind
     property int briVal: OsdController.briVal
     property string stateVal: OsdController.stateVal
 
-    readonly property bool isToggleKind: kind === "capslock" || kind === "numlock" || kind === "airplane"
+    readonly property bool isToggleKind: kind === "capslock" || kind === "numlock" || kind === "airplane" || kind === "touchpad"
     readonly property bool isToggleActive: stateVal === "on" || stateVal === "true" || stateVal === "1"
 
     readonly property bool isToggleAllowed: {
@@ -55,6 +56,7 @@ PanelWindow {
         if (kind === "capslock") return showCapsLock;
         if (kind === "numlock") return showNumLock;
         if (kind === "airplane") return showAirplane;
+        if (kind === "touchpad") return showTouchpad;
         return true;
     }
 
@@ -64,6 +66,7 @@ PanelWindow {
         if (kind === "capslock") return capsColor;
         if (kind === "numlock") return numColor;
         if (kind === "airplane") return airColor;
+        if (kind === "touchpad") return touchpadColor;
         return ThemeBackend.mauve;
     }
 
@@ -71,6 +74,7 @@ PanelWindow {
         if (kind === "capslock") return "Caps Lock";
         if (kind === "numlock") return "Num Lock";
         if (kind === "airplane") return "Airplane Mode";
+        if (kind === "touchpad") return "Touchpad";
         return "";
     }
 
@@ -113,6 +117,7 @@ PanelWindow {
         "showCapsLock": true,
         "showNumLock": true,
         "showAirplane": true,
+        "showTouchpad": true,
         "attachToBar": true
     })
 
@@ -134,6 +139,11 @@ PanelWindow {
     readonly property bool showCapsLock: osdSettings.showCapsLock !== undefined ? osdSettings.showCapsLock : true
     readonly property bool showNumLock: osdSettings.showNumLock !== undefined ? osdSettings.showNumLock : true
     readonly property bool showAirplane: osdSettings.showAirplane !== undefined ? osdSettings.showAirplane : true
+    readonly property bool showTouchpad: osdSettings.showTouchpad !== undefined ? osdSettings.showTouchpad : true
+
+    function toggleTouchpad() {
+        Quickshell.execDetached(["bash", Caching.serpantinumDir + "/scripts/touchpad.sh", "toggle"]);
+    }
 
     onAttachToBarChanged: OsdController.hide()
 
@@ -405,6 +415,8 @@ PanelWindow {
                             return "󰎠";
                         } else if (osdWindow.kind === "airplane") {
                             return "󰀝";
+                        } else if (osdWindow.kind === "touchpad") {
+                            return osdWindow.isToggleActive ? "󰟸" : "󰤳";
                         } else {
                             return osdWindow.briVal > 66 ? "󰃠" : (osdWindow.briVal > 33 ? "󰃟" : "󰃞");
                         }
@@ -441,6 +453,8 @@ PanelWindow {
                                 Networking.wifiEnabled = false;
                                 if (Bluetooth.defaultAdapter) Bluetooth.defaultAdapter.enabled = false;
                             }
+                        } else if (osdWindow.kind === "touchpad") {
+                            osdWindow.toggleTouchpad();
                         } else if (osdWindow.kind === "brightness") {
                             briCmdThrottle.stop();
                             briCmdThrottle.targetPct = -1;
@@ -573,6 +587,8 @@ PanelWindow {
                                 return "󰎠";
                             } else if (osdWindow.kind === "airplane") {
                                 return "󰀝";
+                            } else if (osdWindow.kind === "touchpad") {
+                                return osdWindow.isToggleActive ? "󰟸" : "󰤳";
                             } else {
                                 return osdWindow.briVal > 66 ? "󰃠" : (osdWindow.briVal > 33 ? "󰃟" : "󰃞");
                             }
@@ -609,6 +625,8 @@ PanelWindow {
                                     Networking.wifiEnabled = false;
                                     if (Bluetooth.defaultAdapter) Bluetooth.defaultAdapter.enabled = false;
                                 }
+                            } else if (osdWindow.kind === "touchpad") {
+                                osdWindow.toggleTouchpad();
                             } else if (osdWindow.kind === "brightness") {
                                 briCmdThrottle.stop();
                                 briCmdThrottle.targetPct = -1;
@@ -663,6 +681,8 @@ PanelWindow {
                                     Networking.wifiEnabled = false;
                                     if (Bluetooth.defaultAdapter) Bluetooth.defaultAdapter.enabled = false;
                                 }
+                            } else if (osdWindow.kind === "touchpad") {
+                                osdWindow.toggleTouchpad();
                             }
                         }
                     }

@@ -26,6 +26,7 @@ hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.float({ action = "toggle" }))
 
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("serpantinum brightness lower"), { locked = true })
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("serpantinum brightness raise"), { locked = true })
+hl.bind("XF86TouchpadToggle", hl.dsp.exec_cmd("serpantinum touchpad toggle"), { locked = true })
 
 hl.bind("Print", hl.dsp.exec_cmd("serpantinum screenshot"), { locked = true })
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd("serpantinum screenshot --edit"), { locked = true })

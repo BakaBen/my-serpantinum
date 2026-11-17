@@ -953,6 +953,9 @@
       "airplane": {
         "title": "Show on Airplane Mode"
       },
+      "touchpad": {
+        "title": "Show on Touchpad"
+      },
       "attach_bar": {
         "title": "Attach to the bar in solid/fill style",
         "desc": "Snap OSD popups to the status bar in solid or fill mode. When disabled, the OSD always stays in the configured position."
@@ -1919,6 +1922,7 @@
       "brightness": "Adjust backlight display brightness",
       "location_manual": "Set geographic coordinates and timezone manually",
       "gamma": "Adjust color temperature and automatic day/night schedule",
+      "touchpad": "Enable, disable or toggle the touchpad",
       "translate": "Instant text and selection translator",
       "suspend": "Lock the screen and suspend the system",
       "hibernate": "Hibernate the system",

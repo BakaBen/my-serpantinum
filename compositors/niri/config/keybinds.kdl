@@ -9,6 +9,7 @@ binds {
 
     XF86MonBrightnessDown { spawn "serpantinum" "brightness" "lower"; }
     XF86MonBrightnessUp { spawn "serpantinum" "brightness" "raise"; }
+    XF86TouchpadToggle { spawn "serpantinum" "touchpad" "toggle"; }
 
     Print { spawn "serpantinum" "screenshot"; }
     Shift+Print { spawn "serpantinum" "screenshot" "--edit"; }

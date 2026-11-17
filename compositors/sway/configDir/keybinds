@@ -7,6 +7,7 @@ bindsym $mod+Shift+F floating toggle
 
 bindsym XF86MonBrightnessDown exec serpantinum brightness lower
 bindsym XF86MonBrightnessUp exec serpantinum brightness raise
+bindsym XF86TouchpadToggle exec serpantinum touchpad toggle
 
 bindsym Print exec serpantinum screenshot
 bindsym Shift+Print exec serpantinum screenshot --edit

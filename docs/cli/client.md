@@ -238,6 +238,15 @@ Controls color temperature and the day/night schedule through [serpantinum-gamma
 - `serpantinum gamma stop`: Stop serpantinum-gamma.
 - `serpantinum gamma --verbose` (`-v`): Print verbose output with current Kelvin, brightness and schedule state.
 
+### `touchpad`
+
+Controls the laptop touchpad via compositor IPC (supported on Hyprland and Sway) and shows its OSD banner:
+
+- `serpantinum touchpad` (or `serpantinum touchpad toggle`): Toggle the touchpad between enabled and disabled.
+- `serpantinum touchpad on`: Enable the touchpad.
+- `serpantinum touchpad off`: Disable the touchpad.
+- `serpantinum touchpad status`: Print current touchpad state (`on` or `off`) without showing the OSD.
+
 ### `lock`
 
 Activates lock screen:

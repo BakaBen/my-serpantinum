@@ -52,3 +52,4 @@ Mango uses tags instead of workspaces. The bar shows the lowest active tag of ea
 
 - The UI scale setting is hidden because output scale cannot be changed at runtime. Set it with `monitor_rule` in the config.
 - The output toggle in display settings puts the monitor to sleep instead of removing it.
+- `XF86TouchpadToggle` is bound to `serpantinum touchpad toggle` in `config/keybinds.conf`, though Mango does not expose runtime IPC to toggle input devices (configure touchpad behavior statically in `config/input.conf`).

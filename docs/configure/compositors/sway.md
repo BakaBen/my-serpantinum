@@ -58,3 +58,4 @@ Quick utility actions:
 - Screenshots: `Print exec serpantinum screenshot` (add `--edit` or `--full`)
 - Brightness: `XF86MonBrightnessDown` and `XF86MonBrightnessUp`
 - Volume: `XF86AudioLowerVolume`, `XF86AudioRaiseVolume`, and `XF86AudioMute`
+- Touchpad: `XF86TouchpadToggle` (`serpantinum touchpad toggle`)

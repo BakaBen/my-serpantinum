@@ -205,6 +205,10 @@ Item {
         function display(kind: string): void {
             controller.show(kind);
         }
+
+        function showToggle(kind: string, state: string): void {
+            controller.show(kind, state);
+        }
     }
 
     function hide() {

@@ -58,3 +58,4 @@ Quick utility actions:
 - Screenshots: `Print { spawn "serpantinum" "screenshot"; }` (add `--edit` or `--full`)
 - Brightness: `XF86MonBrightnessDown` and `XF86MonBrightnessUp`
 - Volume: `XF86AudioLowerVolume`, `XF86AudioRaiseVolume`, and `XF86AudioMute`
+- Touchpad: `XF86TouchpadToggle` is bound to `serpantinum touchpad toggle` in `config/keybinds.kdl`, though Niri does not expose runtime IPC to toggle input devices (configure touchpad behavior statically in `config/input.kdl`).

@@ -188,6 +188,7 @@ The configuration file is located at `~/.config/serpantinum/settings.json` (or `
 | `osd.showCapsLock` | `boolean` | `true` | Displays popout banner when toggling CapsLock. |
 | `osd.showNumLock` | `boolean` | `true` | Displays popout banner when toggling NumLock. |
 | `osd.showAirplane` | `boolean` | `true` | Displays popout banner when toggling Airplane mode. |
+| `osd.showTouchpad` | `boolean` | `true` | Displays popout banner when toggling the touchpad. |
 | `osd.attachToBar` | `boolean` | `true` | Automatically offsets position relative to status bar when placed near the same edge. |
 
 ### Notifications

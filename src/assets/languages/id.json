@@ -953,6 +953,9 @@
       "airplane": {
         "title": "Tampilkan pada Mode Pesawat"
       },
+      "touchpad": {
+        "title": "Tampilkan pada Touchpad"
+      },
       "attach_bar": {
         "title": "Lampirkan ke bilah dalam gaya padat/terisi",
         "desc": "Rapatkan sembulan OSD ke bilah status dalam mode padat atau terisi. Saat dinonaktifkan, OSD selalu berada di posisi yang dikonfigurasi."
@@ -1919,6 +1922,7 @@
       "brightness": "Sesuaikan kecerahan lampu latar layar",
       "location_manual": "Atur koordinat geografis dan zona waktu secara manual",
       "gamma": "Sesuaikan suhu warna dan jadwal otomatis siang/malam",
+      "touchpad": "Aktifkan, nonaktifkan, atau alihkan touchpad",
       "translate": "Penerjemah teks dan pilihan teks instan",
       "suspend": "Kunci layar dan tangguhkan sistem",
       "hibernate": "Hibernasi sistem",
